@@ -30,3 +30,4 @@ stage('push to hub') {
             }
 }
 }
+}
