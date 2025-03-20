@@ -23,7 +23,7 @@ stage('build to images') {
 stage('push to hub') {
             steps {
                script{
-                withDockerRegistry(credentialsId: 'docker_cre', url: ' https://index.docker.io/v1/') {
+                withDockerRegistry(credentialsId: 'docker_cre', url: 'https://index.docker.io/v1/') {
                   sh 'docker push devasria/mysimplewebapplication'
                }
             }
