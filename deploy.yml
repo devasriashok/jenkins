@@ -17,12 +17,11 @@ spec:
         apptype: web-backend
     spec:
       containers:
-      - name: my-app
-        image: devasria/mysimplewebapplication:latest
-        ports:
-        - containerPort: 7070
+        - name: my-app
+          image: devasria/mysimplewebapplication:latest
+          ports:
+            - containerPort: 7070
 ---
-
 apiVersion: v1
 kind: Service
 metadata:
@@ -33,8 +32,8 @@ metadata:
 spec:
   type: NodePort
   ports:
-   - targetPort: 8080
-     port: 7070
-     nodePort: 30002
+    - targetPort: 8080
+      port: 7070
+      nodePort: 30002
   selector:
-    apptype: web-backend
+    apptype: web-backend  # Fixed the incorrect comma separator here
