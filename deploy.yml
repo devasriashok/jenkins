@@ -36,4 +36,4 @@ spec:
       port: 7070
       nodePort: 30002
   selector:
-    apptype: web-backend  # Fixed the incorrect comma separator here
+    apptype: web-backend
